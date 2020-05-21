@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    srand(time(NULL));
+    
+    int a=rand();
+    
+    int b=a%10+1;
+    
+    int c=0;
+    
+    scanf("%d",&c);
+
+    while(b!=c)
+    {
+    if(c==b)
+    {
+    	printf("You're correct");
+    }
+    
+    else
+    {
+    	printf("You got missed. Try again");
+    	scanf("%d",c);
+    }
+	} 
+        
+    
+    return 0;
+}
+    
+    
