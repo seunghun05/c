@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int RandomFrom(int f, int t)
+{    
+    int a=rand();
+    
+    int b=a%24;
+    
+    return b+67;
+}
+
+int main()
+{
+	
+	srand(time(NULL));
+	
+	
+	int ccc=RandomFrom(67,90);
+	
+	printf("%d", ccc);
+	
+	return 0;
+}
+	
