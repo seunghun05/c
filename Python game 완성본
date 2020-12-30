@@ -1,0 +1,89 @@
+b = [ [1,2,3], [4,8,6], [7,5,0] ]
+
+def Board():
+    for i in b:
+        print(i)
+
+#main()
+r=2;
+c=2;
+
+Board()
+while b != [ [1,2,3], [4,5,6], [7,8,0] ]:
+
+    
+        
+    d = input()
+
+    
+    if 'w'==d:
+        if r != 0:
+           #값 서로 바꾸기
+           a = b[r-1][c];
+           b[r-1][c] = b[r][c];
+           b[r][c] = a;
+          
+           #0의 위치 재설정
+           r = r-1;
+
+           Board()
+
+           #디버깅
+           
+
+
+    elif 'a'==d:
+        if c != 0:
+           #값 서로 바꾸기
+           A = b[r][c-1];
+           b[r][c-1] = b[r][c];
+           b[r][c] = A;
+
+           #0의 위치 재설정
+           c = c-1;
+
+           Board()
+
+           #디버깅
+           
+
+    elif 's'==d:
+
+        # r이 2가 아니라면, 아래의 코드들을 실행한다. 
+        
+        if r != 2:
+           #값 서로 바꾸기
+           aa = b[r+1][c];
+           b[r+1][c] = b[r][c];
+           b[r][c] = aa;
+
+           #0의 위치 재설정
+           r = r+1;
+
+           Board()
+
+           #디버깅
+           
+
+         
+
+    elif 'd'==d:
+        if c != 2:
+           #값 서로 바꾸기
+           AA = b[r][c+1];
+           b[r][c+1] = b[r][c];
+           b[r][c] = AA;
+
+           #0의 위치 재설정
+           c = c+1;
+
+           Board()
+
+           #디버깅
+           
+
+
+    elif d != 'w' or d!='a' or d!='s' or d!='d':
+
+         #경고
+         print('It wasnot defined.')
